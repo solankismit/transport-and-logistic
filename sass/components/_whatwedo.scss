@@ -1,0 +1,45 @@
+.what-we-do {
+  &__title {
+    h4 {
+      margin: 18px 0 50px;
+    }
+  }
+
+  &__content {
+    &-item {
+      display: flex;
+      flex-direction: row;
+
+      margin-bottom: 70px;
+      &-img {
+        margin-right: 30px;
+        img {
+          width: 77px;
+          height: 66px;
+        }
+      }
+      &-data {
+        width: 65%;
+        padding-left: 25px;
+        position: relative;
+        &::before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 90%;
+          width: 1px;
+          background-color: #d8d8d8;
+        }
+      }
+    }
+  }
+}
+
+// .container {
+//   /*transition: flex 0.5s ease-in-out, max-width 0.5s ease-in-out;
+//     */
+//   transition: flex 0.75s cubic-bezier(0.23, 1, 0.32, 1),
+//     max-width 0.75s cubic-bezier(0.23, 1, 0.32, 1);
+// }

@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  cursor: default;
+  background-color: transparent;
+  // overflow-x: hidden;
+  font-size: 16px;
+
+  @include xxl {
+    font-size: 16px;
+  }
+
+  @include desktop {
+    font-size: 14px;
+  }
+
+  @include laptop {
+    font-size: 12px;
+  }
+
+  @include tablet {
+    font-size: 10px;
+  }
+
+  @include phone {
+    font-size: 10px;
+  }
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+li {
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: black;
+
+  cursor: pointer;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+section {
+  margin-bottom: 100px;
+
+  @include phone {
+    margin-bottom: 50px;
+  }
+}

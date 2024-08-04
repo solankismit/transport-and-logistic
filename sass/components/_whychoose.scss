@@ -1,0 +1,110 @@
+// Remaining to add map bg
+
+.why-choose {
+  background-color: $secondary-color1;
+  box-sizing: border-box;
+  //   width: 99%;
+  overflow-x: hidden;
+
+  &__banner {
+    // position: relative;
+    background-color: $primary-color2;
+    padding: 145px 0;
+
+    &-img {
+      position: relative;
+      height: fit-content;
+      transform: translateX(10%);
+      width: 100%;
+      @include div-img();
+
+      @include tablet {
+        transform: none;
+      }
+
+      &::after {
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #09124230;
+      }
+
+      &-text {
+        bottom: 0;
+        left: 50%;
+        position: absolute;
+        height: auto;
+        width: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: row;
+        padding: 30px;
+        flex-wrap: inherit;
+        box-sizing: border-box;
+        padding: 20px;
+        align-items: center;
+        background: $gradient-yellow;
+        z-index: 3;
+
+        @include phone() {
+          top: 100%;
+          width: 100%;
+          bottom: unset
+        }
+
+        &--icon {
+          @include div-img();
+
+          img {
+            height: auto;
+            width: 60px;
+          }
+        }
+
+        P {
+          //   width: 40vh;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    height: 100%;
+
+    // padding: 145px 0;
+    >div {
+      height: 100%;
+      margin-left: 15%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 55px 0px;
+    }
+
+    h4 {
+      margin: 15px 0;
+    }
+
+    &-description {
+      margin-bottom: 40px;
+    }
+
+    &-tags {
+      &-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;
+
+        span {
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}

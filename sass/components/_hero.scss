@@ -1,0 +1,67 @@
+// .hero {
+//   height: 95vh;
+//   margin-top: -84px;
+.hero {
+  @include tablet-small() {
+    min-height: 100px;
+  }
+  height: 10%;
+  // margin-top: -84px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__banner {
+    @include div-img();
+    @include tablet-small() {
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+      img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+      }
+    }
+  }
+  &__content {
+    position: absolute;
+    top: 0;
+    // left: 20%;
+    // right: 0;
+    // bottom: 0;
+    // height: 100%;
+    // width: 30%;
+    // padding-top: 84px;
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include phone() {
+      left: 10%;
+      width: 80%;
+    }
+
+    @include tablet {
+      margin-top: 30px;
+    }
+
+    @include laptop {
+      margin-top: 40px;
+    }
+    p,
+    h1 {
+      color: $white;
+    }
+    &-heading {
+      margin: 6px 0;
+    }
+    &-description {
+      margin-bottom: 24px;
+    }
+  }
+}

@@ -1,0 +1,122 @@
+header {
+  position: relative;
+}
+.header-1 {
+  background-color: $primary-color2;
+  padding: 46px 0;
+
+  @include tablet-small {
+    padding: 10px 0px;
+  }
+  @include tablet() {
+    padding: 20px 0px;
+  }
+
+  &__logo {
+    @include tablet-small() {
+      @include div-img();
+    }
+  }
+  &__contact {
+    @include tablet-small {
+      display: none;
+    }
+    &-item {
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &__img {
+        @include tablet() {
+          width: 50px;
+        }
+        @include div-img();
+      }
+      &__content {
+        padding-left: 17px;
+      }
+    }
+  }
+
+  // @include tablet() {
+  //   // padding: 10px 0;
+  //   display: none;
+  // }
+}
+.header-2 {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  background-color: rgba(9, 18, 66, 0.25);
+  @include tablet-small() {
+    display: none;
+  }
+
+  &__nav {
+    &-item {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      &:not(:last-child)::after {
+        content: "";
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-width: 1px 1px 0 0;
+        position: absolute;
+        right: -3px;
+        top: 35%;
+        height: 30%;
+      }
+      &.selected,
+      &:hover {
+        p {
+          border-bottom: 1px solid $white;
+        }
+      }
+      p {
+        padding: 30px 0;
+        width: fit-content;
+        @include tablet {
+          padding: 20px 0;
+        }
+      }
+    }
+  }
+
+  &__right {
+    &-social {
+      display: flex;
+      align-items: center;
+      ul {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0;
+        li {
+          padding-left: 24px;
+        }
+      }
+    }
+
+    &-btn {
+      margin-left: 24px;
+      width: min-content;
+      background-color: $white;
+
+      padding: 30px 0;
+      text-align: center;
+      @include tablet {
+        padding: 13px 0;
+      }
+      a {
+        color: #23212a;
+        text-align: center;
+        font-family: Krub;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 135.023%; /* 1.35025rem */
+        // padding: 0 52px;
+      }
+    }
+  }
+}

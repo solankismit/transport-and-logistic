@@ -1,0 +1,82 @@
+.testimonial {
+  margin-top: 200px;
+
+  @include phone() {
+    margin-top: 10px;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__content {
+    @include phone() {
+      margin-top: 10px;
+    }
+
+    .col-lg-6 {
+      &:first-child {
+        background-color: $secondary-color1;
+      }
+
+      &:last-child {
+        background-color: $primary-color2;
+
+        * {
+          color: $white;
+        }
+      }
+    }
+
+    &-item {
+      padding: 62px 72px;
+
+      @include phone() {
+        padding: 62px 20px;
+      }
+
+      &-profile {
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        >div {
+          display: flex;
+          flex-direction: row;
+        }
+
+        &-img {
+          height: 91px;
+          width: 91px;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+
+        &-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-left: 10px;
+
+          h6 {
+            font-weight: 500;
+            line-height: normal;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &-description {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

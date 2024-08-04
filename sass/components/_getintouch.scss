@@ -1,0 +1,68 @@
+.get-in-touch {
+  background-color: $primary-color2;
+  padding: 143px 0px;
+  &__title {
+    h4 {
+      color: $white;
+      margin-top: 13px;
+    }
+    &--para {
+      color: $white;
+      margin-bottom: 32px;
+    }
+
+    &--contact {
+      display: flex;
+      flex-direction: column;
+      @include tablet() {
+        flex-direction: row;
+        margin-bottom: 20px;
+      }
+      @include phone() {
+        flex-direction: column;
+      }
+      gap: 30px;
+      &-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+      }
+    }
+  }
+
+  &__form {
+    margin-top: 40px;
+    &--text-box {
+      input,
+      textarea {
+        margin-bottom: 30px;
+        border: 1px solid #4e5683;
+        background-color: transparent;
+        padding: 20px 30px;
+        color: $white;
+        &:focus {
+          text-decoration: none;
+          outline: none;
+          background-color: #4e5683;
+        }
+      }
+
+      textarea {
+        height: 150px;
+      }
+    }
+  }
+  &__imgs {
+    margin-top: 70px;
+
+    .row.g-0 {
+      justify-content: center;
+    }
+    &-item {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
